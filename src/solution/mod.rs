@@ -1,1 +1,2 @@
+mod s0001_two_sum;
 mod s0105_construct_binary_tree_from_preorder_and_inorder_traversal;
