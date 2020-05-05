@@ -46,7 +46,7 @@ impl Solution {
         let mut res = Vec::new();
         let mut tmp = Vec::new();
         fn backtrack(node: Option<Rc<RefCell<TreeNode>>>, sum: i32, res: &mut Vec<Vec<i32>>, tmp: &mut Vec<i32>) {
-            if root.is_none() {
+            if node.is_none() {
                 return;
             }
             let tree_node = node.as_ref().unwrap().borrow();
