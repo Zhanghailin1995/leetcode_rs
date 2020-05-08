@@ -40,7 +40,7 @@ impl Solution {
         Solution::helper(&preorder, &idx_map, 0, 0, inorder.len() as i32)
     }
 
-    fn helper(preorder: &Vec<i32>, idx_map: &HashMap<i32, usize>, mut pre_root_index: usize, left: i32, right: i32) -> Option<Rc<RefCell<TreeNode>>> {
+    fn helper(preorder: &Vec<i32>, idx_map: &HashMap<i32, usize>,  pre_root_index: usize, left: i32, right: i32) -> Option<Rc<RefCell<TreeNode>>> {
         if left == right {
             return None;
         }

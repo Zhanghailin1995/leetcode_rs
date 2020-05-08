@@ -56,12 +56,12 @@ impl Solution {
         Solution::helper(root, 0)
     }
 
-    fn helper(node: Option<Rc<RefCell<TreeNode>>>, mut i: i32) -> i32 {
+    fn helper(node: Option<Rc<RefCell<TreeNode>>>,  i: i32) -> i32 {
         if node.is_none() {
             return 0;
         }
         let tree_node = node.as_ref().unwrap().borrow();
-        let mut temp = i * 10 + tree_node.val;
+        let  temp = i * 10 + tree_node.val;
         return match (tree_node.left.clone(), tree_node.right.clone()) {
             (None, None) => {
                 temp
@@ -69,7 +69,7 @@ impl Solution {
             (l, r) => {
                 Solution::helper(l, temp) + Solution::helper(r, temp)
             }
-        };
+        }
     }
 }
 
