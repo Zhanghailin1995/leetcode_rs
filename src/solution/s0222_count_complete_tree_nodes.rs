@@ -38,6 +38,18 @@ impl Solution {
         if root.is_none() {
             return 0;
         }
+        // let tree_node = root.unwrap().borrow(); // 这样写会编译报错,我不知道为什么会这样 ,但是可以从rustc --explain E0716 中获取提示
+        // 查阅资料之后大致意思是borrow()方法传入的参数是一个&self,连着写的 就是类似
+        // let tree_node = {
+        //     let tmp = root.unwrap();
+        //     borrow(&tmp)  // <-- tmp is freed as we exit this block //返回的是一个悬垂引用
+        // }
+        // 但是我不明白为啥这么写是可以的 let tree_node = root.as_ref().unwrap().borrow();
+        // 但是可以这样写
+        //
+        // let tree_node = root.unwrap();
+        // let tree_node = tree_node.borrow();
+        // rust真是让人既爱又恨
         let tree_node = root.as_ref().unwrap().borrow();
         let left = Solution::count_level(tree_node.left.clone());
         let right = Solution::count_level(tree_node.right.clone());
@@ -53,7 +65,7 @@ impl Solution {
         let mut cur = node;
         while let Some(tree_node) = cur {
             level += 1;
-            cur = tree_node.as_ref().borrow().left.clone();
+            cur = tree_node.borrow().left.clone();
         }
         level
     }
@@ -67,6 +79,7 @@ impl Solution {
             }
         }
     }
+
 }
 
 // submission codes end
@@ -83,4 +96,5 @@ mod tests {
         assert_eq!(Solution::count_nodes(tree![1]), 1);
         assert_eq!(Solution::count_nodes(tree![1, 1, 1]), 3);
     }
+
 }

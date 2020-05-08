@@ -7,3 +7,4 @@ mod s0114_flatten_binary_tree_to_linked_list;
 mod s0129_sum_root_to_leaf_numbers;
 mod s0199_binary_tree_right_side_view;
 mod s0222_count_complete_tree_nodes;
+mod s0226_invert_binary_tree;
