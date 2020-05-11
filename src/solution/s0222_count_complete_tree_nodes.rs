@@ -49,7 +49,6 @@ impl Solution {
         //
         // let tree_node = root.unwrap();
         // let tree_node = tree_node.borrow();
-        // rust真是让人既爱又恨
         let tree_node = root.as_ref().unwrap().borrow();
         let left = Solution::count_level(tree_node.left.clone());
         let right = Solution::count_level(tree_node.right.clone());
