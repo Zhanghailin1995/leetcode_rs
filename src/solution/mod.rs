@@ -11,3 +11,4 @@ mod s0226_invert_binary_tree;
 mod s0236_lca_of_binary_tree;
 mod s0257_binary_tree_paths;
 mod s0404_sum_of_left_leaves;
+mod s0437_path_sum3;

@@ -65,7 +65,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_257() {
+    fn test_404() {
         assert_eq!(
             Solution::sum_of_left_leaves(tree![3,9,20,null,null,15,7]),
             24
