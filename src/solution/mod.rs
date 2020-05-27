@@ -12,3 +12,5 @@ mod s0236_lca_of_binary_tree;
 mod s0257_binary_tree_paths;
 mod s0404_sum_of_left_leaves;
 mod s0437_path_sum3;
+mod s0450_delete_node_in_bst;
+mod s0501_find_mode_in_binary_search_tree;

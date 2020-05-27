@@ -10,9 +10,9 @@
 ///    15   7
 ///
 /// 在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24
-
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/binary-tree-paths/
@@ -42,6 +42,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn sum_of_left_leaves(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         if root.is_none() {
             return 0;

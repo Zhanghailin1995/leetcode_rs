@@ -1,3 +1,4 @@
+
 // Definition for a binary tree node.
 // #[derive(Debug, PartialEq, Eq)]
 // pub struct TreeNode {
@@ -16,15 +17,17 @@
 //     }
 //   }
 // }
+#![allow(unused_imports)]
 use std::rc::Rc;
 use std::cell::RefCell;
-
+#[allow(dead_code)]
 pub struct Solution {}
 
 use crate::util::tree::{to_tree, TreeNode};
 use std::collections::HashMap;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn build_tree2(preorder: Vec<i32>, inorder: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
         if preorder.len() == 0 {
             return None;
@@ -55,6 +58,7 @@ impl Solution {
         root
     }
 
+    #[allow(dead_code)]
     pub fn build_tree(preorder: Vec<i32>, inorder: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
         Solution::build_tree_helper(&preorder[..], &inorder[..])
     }

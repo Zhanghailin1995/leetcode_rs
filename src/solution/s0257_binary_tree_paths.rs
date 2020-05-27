@@ -21,8 +21,9 @@
  * Explanation: All root-to-leaf paths are: 1->2->5, 1->3
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/binary-tree-paths/
@@ -52,6 +53,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn binary_tree_paths(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<String> {
         let mut res = Vec::new();
         Solution::helper(root, "".to_owned(), &mut res);

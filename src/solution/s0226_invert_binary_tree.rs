@@ -29,7 +29,9 @@
  * <blockquote>Google: 90% of our engineers use the software you wrote (Homebrew), but you can&rsquo;t invert a binary tree on a whiteboard so f*** off.</blockquote>
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/invert-binary-tree/
@@ -40,6 +42,7 @@ use crate::util::tree::{to_tree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
 impl Solution {
+    #[allow(dead_code)]
     pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
         if let Some(node) = root.clone() {
             Solution::invert_tree(node.borrow().right.clone());

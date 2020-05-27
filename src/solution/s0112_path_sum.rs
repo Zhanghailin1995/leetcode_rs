@@ -22,8 +22,9 @@
  * return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/path-sum/
@@ -35,6 +36,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn has_path_sum(root: Option<Rc<RefCell<TreeNode>>>, sum: i32) -> bool {
         if root.is_none() {
             return false;

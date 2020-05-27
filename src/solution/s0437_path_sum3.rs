@@ -24,9 +24,9 @@
 // 1.  5 -> 3
 // 2.  5 -> 2 -> 1
 // 3. -3 -> 11
-
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 // Definition for a binary tree node.
 // #[derive(Debug, PartialEq, Eq)]
@@ -51,6 +51,7 @@ use std::cell::RefCell;
 use std::collections::HashMap;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn path_sum(root: Option<Rc<RefCell<TreeNode>>>, sum: i32) -> i32 {
         let mut prefix_sum_count = HashMap::new();
         prefix_sum_count.insert(0, 1);

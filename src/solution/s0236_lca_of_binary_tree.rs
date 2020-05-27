@@ -1,5 +1,6 @@
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 use std::cell::RefCell;
@@ -7,6 +8,7 @@ use std::rc::Rc;
 
 impl Solution {
     //https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/c-jing-dian-di-gui-si-lu-fei-chang-hao-li-jie-shi-/
+    #[allow(dead_code)]
     pub fn lca_of_binary_tree(root: Option<Rc<RefCell<TreeNode>>>, p: i32, q: i32) -> Option<i32> {
         if root.is_none() {
             return None;

@@ -23,8 +23,9 @@
  *
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
@@ -36,6 +37,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn build_tree(inorder: Vec<i32>, postorder: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
         Solution::build_tree_helper(&postorder[..], &inorder[..])
     }

@@ -25,14 +25,14 @@ fn main() {
     println!("{}", cat.c);
 }*/
 
-use std::fmt::Debug;
+/*use std::fmt::Debug;
 use std::marker::PhantomData;
 use std::ptr::replace;
 
 static mut G2 : i32 = 4;
 
 fn main() {
-    /*let u = {
+    *//*let u = {
         let t = Test {
             v: Box::new(1)
         };
@@ -43,7 +43,7 @@ fn main() {
             _marker: PhantomData,
         }
     };
-    println!("data: {:?}", unsafe { &(*u.data).v });*/
+    println!("data: {:?}", unsafe { &(*u.data).v });*//*
     let local_var;
     unsafe {
         local_var = G2;
@@ -72,6 +72,11 @@ impl<'a, T: Debug> User<'a, T> {
             _marker: PhantomData,
         }
     }
+}*/
+
+
+fn main() {
+    println!("hello leet code")
 }
 
 

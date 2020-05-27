@@ -39,8 +39,9 @@
  * Therefore, sum = 495 + 491 + 40 = 1026.
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/sum-root-to-leaf-numbers/
@@ -52,6 +53,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn sum_numbers(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         Solution::helper(root, 0)
     }
@@ -61,7 +63,7 @@ impl Solution {
             return 0;
         }
         let tree_node = node.as_ref().unwrap().borrow();
-        let  temp = i * 10 + tree_node.val;
+        let temp = i * 10 + tree_node.val;
         return match (tree_node.left.clone(), tree_node.right.clone()) {
             (None, None) => {
                 temp

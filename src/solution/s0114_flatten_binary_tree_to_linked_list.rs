@@ -30,7 +30,9 @@
  *
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
@@ -41,6 +43,7 @@ use crate::util::tree::{to_tree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
 impl Solution {
+    #[allow(dead_code)]
     pub fn flatten(root: &mut Option<Rc<RefCell<TreeNode>>>) {
         // 把左树插到右树上
         match root {

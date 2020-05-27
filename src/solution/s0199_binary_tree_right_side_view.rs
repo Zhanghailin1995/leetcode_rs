@@ -17,8 +17,9 @@
  *   5     4       <---
  *
  */
+#[allow(dead_code)]
 pub struct Solution {}
-
+#[allow(unused_imports)]
 use crate::util::tree::{to_tree, TreeNode};
 
 // problem: https://leetcode.com/problems/binary-tree-right-side-view/
@@ -31,6 +32,7 @@ use std::collections::LinkedList;
 use std::rc::Rc;
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let mut res = Vec::new();
         if root.is_none() {

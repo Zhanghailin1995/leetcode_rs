@@ -9,13 +9,15 @@
 // Because nums[0] + nums[1] = 2 + 7 = 9,
 // return [0, 1].
 
-
+#[allow(dead_code)]
 pub struct Solution {}
 
 
 use std::collections::HashMap;
 
 impl Solution {
+
+    #[allow(dead_code)]
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut map = HashMap::with_capacity(nums.len());
         for (idx, num) in nums.iter().enumerate() {
