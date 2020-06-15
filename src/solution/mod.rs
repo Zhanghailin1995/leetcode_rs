@@ -1,4 +1,5 @@
 mod s0001_two_sum;
+mod s0014_longest_common_prefix;
 mod s0105_construct_binary_tree_from_preorder_and_inorder_traversal;
 mod s0106_construct_binary_tree_from_inorder_and_postorder_traversal;
 mod s0112_path_sum;
@@ -10,7 +11,9 @@ mod s0222_count_complete_tree_nodes;
 mod s0226_invert_binary_tree;
 mod s0236_lca_of_binary_tree;
 mod s0257_binary_tree_paths;
+mod s0290_word_pattern;
 mod s0404_sum_of_left_leaves;
 mod s0437_path_sum3;
 mod s0450_delete_node_in_bst;
 mod s0501_find_mode_in_binary_search_tree;
+mod s0508_most_frequent_subtree_sum;
